@@ -1,0 +1,270 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>portfolio-items</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- start slider -->
+	<link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/jquery.mobile.customized.min.js"></script>
+    <script type='text/javascript' src="js/jquery.easing.1.3.js"></script> 
+    <script type='text/javascript' src="js/camera.min.js"></script>
+    <script>
+		jQuery(function(){
+
+			jQuery('#camera_wrap_2').camera({
+				
+				loader: 'bar',
+				pagination: false,
+				thumbnails: false
+			});
+		});
+	</script>
+<!-- end slider -->
+<!-- start gallery -->
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: 0}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
+<!-- Add fancyBox main JS and CSS files -->
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
+</head>
+<body>
+<!--star wrap-->      
+	    <div class="wrap">	
+	    	<!--header--> 
+	      		<div class="header">
+	      				<!--start-logo-->
+				          <div class="logo">	
+				             <a href="index.html"><h1>jet<span>ro</span></h1></a>
+				          </div>
+				        <!--end-logo-->
+	      	 			<!--start-menu-->
+					  	<div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+							<ul class="nav">
+								<li><a href="index.html">home</a></li>
+								<li><a href="about.html">about us</a></li>
+								<li><a href="blog.html">blog</a></li>
+								<li class="active" ><a href="portfolio.html">portfolio</a></li>
+								<li><a href="contact.html">contact us</a></li>
+							<div class="clear"> </div>
+						    </ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				        </div>	
+						<!--end-menu-->
+				            <div class="clear"> </div>				
+				</div>
+				</div>
+		  <!--end-header-->
+<!--end wrap-->   
+<!--top- heading-->
+<div clasS="top-heading">
+	<!--start-wrap-->
+	<div class="wrap">
+		<h1>portoflio</h1>
+	</div>
+	<!--end wrap-->
+</div> 
+<!--start portfolio-->
+<div class="wrap">
+	<div class="portofolio-item">
+		<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod. </h1>
+			<div class="banner">
+				<img src="images/slider6.jpg" alt="" />
+			</div>
+			<div class="img-info">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="portofolio-item-con">
+			<div class="heading">
+				<h2>recent wroks</h2>
+				<h6> </h6>
+					<div class="clear"> </div>
+			</div>
+			<div class="main_btm">
+		
+			<!--start-mfp -->	
+			<div id="small-dialog1" class="mfp-hide">
+				<div class="pop_up">
+					<h2>character desing</h2>
+					<img src="images/popup.jpg" alt=""/>
+					<p class="para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+				</div>
+			</div>
+			<!--end-mfp -->	
+		<!--start-content-->
+		
+			<div class="gallery">
+					<div class="clear"> </div>
+					<div class="container">
+					
+			<div id="gallerylist">
+			
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image1.jpg"  alt="Image 1"/>
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>character desing</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image2.jpg"  alt="Image 2"/>
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>brochure desing</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image3.jpg"  alt="Image 3" />
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>social media buttons</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image4.jpg"  alt="Image 4" />
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>10 amazing websites</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+
+			</div>																																							
+		</div>
+	</div><!-- container -->
+	<script type="text/javascript" src="js/fliplightbox.min.js"></script>
+	<script type="text/javascript">$('body').flipLightBox()</script>
+	<div class="clear"> </div>
+	</div>
+	</div>
+	</div>
+</div>
+<!--start footer-->
+<div class="footer">
+	<div class="footer-main wrap">
+	<div class="footer-grids">
+		<div class="fgrid">
+			<h3>about jetro</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,Ut enim ad minim veniam.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+		</div>
+		<div class="fgrid">
+			<h3>twitter widget</h3>
+				<div>
+					<p><a href="#">@Lorem ipsum</a> What an awesome design with great functioality:)</p>
+					<a href="#">about 1 hour ago</a>
+				</div>
+				<div>
+					<p><a href="#">@Lorem ipsum</a> What an awesome design with great functioality:)</p>
+					<a href="#">about 2 hour ago</a>
+				</div>
+				<div>
+					<p>Follow <a href="#">@Lorem ipsum</a></p>
+				</div>
+		</div>
+		<div class="fgrid">
+			<h3>contact us</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,Ut enim ad minim veniam.</p>
+			<a href="#"><p>information@jetro.com</p></a>
+			<h4>1,22,333,4444</h4>
+				<div class="social-media">
+			     <ul>
+			         <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="twitter"><a href="#" target="_blank"> </a> </span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="email"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="rss"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="vimeo"><a href="#" target="_blank"> </a></span></li>
+				</ul>
+		</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+</div>
+<!--end footer-->
+<div class="copy-right">
+			<div class="wrap">
+				<div class="copy-right-left">
+					<p>Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="http://www.freemoban.com/">免费模板网</a></p>
+				</div>
+			</div>
+			</div>
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>html5橘红色网页模版jetro</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- jQuery -->
+<!--start slider-->
+	<link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="js/jquery.min.js"></script>
+    <script type='text/javascript' src="js/jquery.mobile.customized.min.js"></script>
+    <script type='text/javascript' src="js/jquery.easing.1.3.js"></script> 
+    <script type='text/javascript' src="js/camera.min.js"></script>
+    <script>
+		jQuery(function(){
+
+			jQuery('#camera_wrap_2').camera({
+				
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true
+			});
+		});
+	</script>
+<!--end slider-->
+<!--start gallery-->
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#gallerylist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#gallerylist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
+<!--Add fancyBox main JS and CSS files-->
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
+
+
+</head>
+<body>
+<!--star-wrap-->      
+	    <div class="wrap">	
+	    	<!--header--> 
+	      		<div class="header">
+	      				<!--start-logo-->
+				          <div class="logo">	
+				             <a href="index.html"><h1>jet<span>ro</span></h1></a>
+				          </div>
+				        <!--end-logo-->
+	      	 			<!--start-menu-->
+					  	<div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt= " " /></a>
+							<ul class="nav">
+								<li class="active"><a href="index.html">home</a></li>
+								<li ><a href="about.html">about us</a></li>
+								<li><a href="blog.html">blog</a></li>
+								<li><a href="portfolio.html">portfolio</a></li>
+								<li><a href="contact.html">contact us</a></li>
+							<div class="clear"> </div>
+						    </ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				        </div>	
+				        <div class="clear"> </div>
+						<!--end-menu-->
+				            				
+				</div>
+				</div>
+		  <!--end-header-->
+<!--end wrap-->    
+
+<!-- start slider -->
+<div class="main-con">
+	<div class="slider">
+		<div class="color"> <span> </span></div>
+		<div class="wrap">
+		<div class="fluid_container">
+        <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
+            <div data-thumb="images/them1.png" data-src="images/slider1.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    <h2>slider one</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div data-thumb="images/them2.jpg" data-src="images/slider2.jpg">
+                <div class="camera_caption fadeFromBottom">
+                  <h2>slider two</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+            </div>
+            <div data-thumb="images/them3.jpg" data-src="images/slider3.jpg">
+                <div class="camera_caption fadeFromBottom">
+                   <h2>slider three</h2>
+                    <p><a href="http://www.freemoban.com" target="_blank">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a></p>
+                </div>
+            </div>
+            <div data-thumb="images/them4.jpg" data-src="images/slider4.jpg">
+                <div class="camera_caption fadeFromBottom">
+               	    <h2>slider four</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+            </div>
+            <div data-thumb="images/them2.jpg" data-src="images/slider2.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    <h2>slider ofive</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div data-thumb="images/them6.jpg" data-src="images/slider6.jpg">
+                <div class="camera_caption fadeFromBottom">
+                  <h2>slider six</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            
+        </div><!-- #camera_wrap_2 -->
+    </div><!-- .fluid_container -->
+    <div class="clear"></div>
+	</div>
+</div>
+<!--end slider-->
+<!--start home-page-con-->			  					     
+
+	<div class="home-page-con">
+		<div class="wrap">
+		<div class="top-grids">
+			<div class="top-grid">
+				<div class="top-grid-info">
+					<img src="images/por.png" style="margin-top: 4px;" alt=" "/>
+					<h2>check  out my  lastest portfolio items</h2>
+					<div class="clear"> </div>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<a class="btn" href="portofolioitem.html">More</a>
+			</div>
+			<div class="top-grid">
+				<div class="top-grid-info">
+					<img src="images/wrok.png" alt=" "/>
+					<h2>check  out my  lastest portfolio items</h2>
+					<div class="clear"> </div>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<a class="btn" href="portofolioitem.html">More</a>
+			</div>
+			<div class="top-grid">
+				<div class="top-grid-info">
+					<img src="images/connect.png" alt=" "/>
+					<h2>check  out my  lastest portfolio items</h2>
+					<div class="clear"> </div>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<a class="btn" href="portofolioitem.html">More</a>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		
+			<div class="heading">
+				<h2>recent wroks</h2>
+				<h6> </h6>
+					<div class="clear"> </div>
+			</div>
+			
+		
+	
+
+<!--end home-page-con-->
+<div class="main_btm">
+		
+			<!--start-mfp -->	
+			<div id="small-dialog1" class="mfp-hide">
+				<div class="pop_up">
+					<h2>character desing</h2>
+					<img src="images/popup.jpg" alt=" "/>
+					<p class="para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+				</div>
+			</div>
+			<!--end-mfp -->	
+		<!--start-content-->
+			<div class="gallery">
+					<div class="clear"> </div>
+					<div class="container">
+					
+			<div id="gallerylist">
+			
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image1.jpg"  alt="Image 1"/>
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>character desing</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image2.jpg"  alt="Image 2"/>
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>brochure desing</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image3.jpg"  alt="Image 3" />
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>social media buttons</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+				<div class="gallerylist-wrapper">				
+					<a class="popup-with-zoom-anim" href="#small-dialog1">
+						<img src="images/image4.jpg"  alt="Image 4" />
+						<span><img src="images/plus.png" alt=" "/> </span>
+						<div class="desc">
+						 	<h2>10 amazing websites</h2>
+						 	<h3>june 15,2014</h3>
+						</div>
+					</a>
+				</div>
+
+			</div>																																							
+		</div>
+	</div><!-- container -->
+	<script type="text/javascript" src="js/fliplightbox.min.js"></script>
+	<script type="text/javascript">$('body').flipLightBox()</script>
+	<div class="clear"> </div>
+	</div>
+
+</div>
+</div>
+<!--End-gallery-->
+<!--start footer-->
+<div class="footer">
+	<div class="footer-main wrap">
+	<div class="footer-grids">
+		<div class="fgrid">
+			<h3>about jetro</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,Ut enim ad minim veniam.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+		</div>
+		<div class="fgrid">
+			<h3>twitter widget</h3>
+				<div>
+					<p><a href="#">@Lorem ipsum</a> What an awesome design with great functioality:)</p>
+					<a href="#">about 1 hour ago</a>
+				</div>
+				<div>
+					<p><a href="#">@Lorem ipsum</a> What an awesome design with great functioality:)</p>
+					<a href="#">about 2 hour ago</a>
+				</div>
+				<div>
+					<p>Follow <a href="#">@Lorem ipsum</a></p>
+				</div>
+		</div>
+		<div class="fgrid">
+			<h3>contact us</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,Ut enim ad minim veniam.</p>
+			<a href="#"><p>information@jetro.com</p></a>
+			<h4>1,22,333,4444</h4>
+				<div class="social-media">
+			     <ul>
+			        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="twitter"><a href="#" target="_blank"> </a> </span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="email"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="rss"><a href="#" target="_blank"> </a></span></li>
+			        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="vimeo"><a href="#" target="_blank"> </a></span></li>
+				</ul>
+		</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+</div>
+<!--end footer-->
+<div class="copy-right">
+			<div class="wrap">
+				<div class="copy-right-left">
+					<p>Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="http://www.freemoban.com/">免费模板网</a></p>
+				</div>
+			</div>
+			</div>
+</div>
+
+</body>
+</html>
